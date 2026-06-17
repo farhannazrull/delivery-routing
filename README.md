@@ -45,26 +45,49 @@ report/
 
 ## How to run
 
+> **Note:** On macOS/Linux use `python3` and `pip3`. On Windows use `python` and `pip`.
+
 ```bash
 git clone <this repo URL>
 cd delivery-routing
+
+# macOS/Linux
+pip3 install -r requirements.txt
+
+# Windows
 pip install -r requirements.txt
-
-# 1. Run correctness tests
-python -m pytest tests/ -v
-# (or: python tests/test_correctness.py)
-
-# 2. Run the end-to-end demo (depot -> several delivery stops)
-python demo/cli_demo.py --n 1500 --stops 6 --seed 1
-# -> prints each route + timing, saves demo/demo_map.png
-
-# 3. Reproduce the full benchmark (ONE COMMAND, the required entry point)
-python bench/run_benchmark.py
-# -> writes bench/benchmark_results.csv (5 sizes: 100..10,000 vertices, 5 repeats each, fixed seeds)
-
-python bench/plot_results.py
-# -> writes bench/runtime_vs_size.png and prints the empirical growth exponent
 ```
+
+**1. Run correctness tests**
+```bash
+# macOS/Linux
+python3 -m pytest tests/ -v
+
+# Windows
+python -m pytest tests/ -v
+```
+
+**2. Run the end-to-end demo** (depot -> several delivery stops)
+```bash
+# macOS/Linux
+python3 demo/cli_demo.py --n 1500 --stops 6 --seed 1
+
+# Windows
+python demo/cli_demo.py --n 1500 --stops 6 --seed 1
+```
+→ prints each route + timing, saves `demo/demo_map.png`
+
+**3. Reproduce the full benchmark** (ONE COMMAND, the required entry point)
+```bash
+# macOS/Linux
+python3 bench/run_benchmark.py
+python3 bench/plot_results.py
+
+# Windows
+python bench/run_benchmark.py
+python bench/plot_results.py
+```
+→ writes `bench/benchmark_results.csv` and `bench/runtime_vs_size.png`
 
 All randomness is seeded (`MASTER_SEED = 42` in `bench/run_benchmark.py`,
 `--seed` flag in the demo), so every run reproduces identical graphs and
