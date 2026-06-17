@@ -48,7 +48,7 @@ report/
 > **Note:** On macOS/Linux use `python3` and `pip3`. On Windows use `python` and `pip`.
 
 ```bash
-git clone <https://github.com/farhannazrull/delivery-routing.git>
+git clone https://github.com/farhannazrull/delivery-routing.git
 cd delivery-routing
 
 # macOS/Linux
