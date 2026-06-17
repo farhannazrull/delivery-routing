@@ -95,5 +95,7 @@ repository. Libraries are used only for supporting roles:
 
 ## Authors
 
-Single-member submission — see `Report.pdf` (title page) and the
-contribution table in `Report.pdf` §4 for details.
+| Nama | NIM | Kontribusi |
+|------|-----|------------|
+| Mohammad Farhan Nazrul Ilhami | | % |
+| | | % |
