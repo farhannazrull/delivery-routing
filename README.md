@@ -1,4 +1,4 @@
-# Smart Delivery Routing — Dijkstra vs. Bellman-Ford
+# Smart Delivery Routing: Dijkstra vs. Bellman-Ford
 
 EF234405 Design & Analysis of Algorithms — Final Exam (Group Capstone Project)
 
@@ -118,7 +118,7 @@ repository. Libraries are used only for supporting roles:
 
 ## Authors
 
-| Nama | NIM | Kontribusi |
+| Name | NRP | Contribution |
 |------|-----|------------|
 | Mohammad Farhan Nazrul Ilhami | | % |
 | | | % |
