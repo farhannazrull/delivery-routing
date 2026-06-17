@@ -1,0 +1,24 @@
+digraph architecture {
+    rankdir=TB;
+    node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, margin="0.18,0.12"];
+    edge [fontname="Helvetica", fontsize=9, color="#555555"];
+    bgcolor="white";
+
+    GraphGen [label="src/graph.py\nGraph (adjacency list)\n+ generate_road_network()\n(uses scipy.cKDTree for k-NN)", fillcolor="#DCE6F1", color="#2E75B6"];
+    Dijkstra [label="src/dijkstra.py\nDijkstra\n(binary heap, own logic)", fillcolor="#D9EAD3", color="#38761D"];
+    BellmanFord [label="src/bellman_ford.py\nBellman-Ford\n(edge relaxation, own logic)", fillcolor="#FCE5CD", color="#B45309"];
+    Tests [label="tests/test_correctness.py\nUnit + cross-check tests", fillcolor="#EAD1DC", color="#A64D79"];
+    Demo [label="demo/cli_demo.py\nEnd-to-end delivery\nrouting demo + map PNG", fillcolor="#FFF2CC", color="#BF9000"];
+    Bench [label="bench/run_benchmark.py\nTiming harness\n(5 sizes x 5 repeats)\n-> benchmark_results.csv", fillcolor="#D0E0E3", color="#134F5C"];
+    Plot [label="bench/plot_results.py\nlog-log plot +\ngrowth-exponent fit", fillcolor="#D0E0E3", color="#134F5C"];
+
+    GraphGen -> Dijkstra;
+    GraphGen -> BellmanFord;
+    Dijkstra -> Tests;
+    BellmanFord -> Tests;
+    Dijkstra -> Demo;
+    BellmanFord -> Demo;
+    Dijkstra -> Bench;
+    BellmanFord -> Bench;
+    Bench -> Plot [label="  CSV"];
+}
