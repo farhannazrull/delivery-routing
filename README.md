@@ -120,5 +120,5 @@ repository. Libraries are used only for supporting roles:
 
 | Name | NRP | Contribution |
 |------|-----|------------|
-| Mohammad Farhan Nazrul Ilhami | | % |
-| | | % |
+| Mohammad Farhan Nazrul Ilhami | 5025231053 | 60 % |
+| Ulil Amry Ghovary | 5025231125 | 40 % |
